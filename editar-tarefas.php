@@ -1,5 +1,4 @@
 <?php
-// Requer os arquivos necessários para a conexão ao banco de dados, definição de objetos e repositório de tabelas.
 require "src/conexao.php";
 require "src/Modelo/objetos.php";
 require "src/Repositorio/tabelasRepositorio.php";
@@ -13,7 +12,7 @@ if (isset($_POST['editar'])) {
   // O ID é obtido via $_GET['id'], enquanto o título, descrição e estado vêm do formulário ($_POST).
   $tarefa = new Tabela($_GET['id'], $_POST['titulo'], $_POST['descricao'], $_POST['estado']);
 
-  // Atualiza a tarefa no banco de dados utilizando o repositório.
+  // aciona a função atualizar 
   $tabelaRepositorio->atualizar($tarefa);
 
   // Redireciona para a página principal após a atualização.
@@ -45,15 +44,14 @@ if (isset($_POST['editar'])) {
   <main>
     <section class="container-form">
       <form method="post" enctype="multipart/form-data">
-        <!-- Campo para editar o título da tarefa. O valor atual é preenchido automaticamente com PHP. -->
+       
         <label for="titulo">titulo</label>
         <input type="text" id="titulo" name="titulo" placeholder="Digite o titulo" value="<?= $tarefa->getTitulo() ?>" required>
 
         <div class="container-radio">
-          <!-- Opções de estado da tarefa, com o estado atual marcado como "checked" -->
           <div>
             <label for="nIniciado">não iniciado</label>
-            <input type="radio" id="nIniciado" name="estado" value="não iniciado" <?= $tarefa->getEstado() == "não iniciado" ? "checked" : "" ?>>
+            <input type="radio" id="nIniciado" name="estado" value="não iniciado" <?= $tarefa->getEstado() == "não iniciado" ? "checked" : "" ?>> <!-- se o valos estdo for igual a "não iniciado" deixe marcado, se não retorne limpo -->
           </div>
           <div>
             <label for="emAndamento">em andamento</label>
@@ -65,11 +63,9 @@ if (isset($_POST['editar'])) {
           </div>
         </div>
 
-        <!-- Campo para editar a descrição da tarefa. O valor atual é preenchido automaticamente com PHP. -->
         <label for="descricao">Descrição</label>
         <input type="text" name="descricao" id="descricao" value="<?= $tarefa->getDescricao() ?>" placeholder="Digite uma descrição" required>
 
-        <!-- Botão para submeter o formulário de edição. -->
         <input type="submit" name="editar" class="botao-cadastrar" value="Editar produto" />
       </form>
     </section>
