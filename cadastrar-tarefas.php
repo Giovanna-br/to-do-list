@@ -1,7 +1,7 @@
 <?php
-require "src/conexao.php"; // Inclui o arquivo de conexão com o banco de dados
-require "src/Modelo/objetos.php"; // Inclui o arquivo que contém a classe "Tabela"
-require "src/Repositorio/tabelasRepositorio.php"; // Inclui o arquivo que contém a classe "TabelaRepositorio"
+require "src/conexao.php"; 
+require "src/Modelo/objetos.php"; 
+require "src/Repositorio/tabelasRepositorio.php";
 
 
 // Verifica se o formulário foi enviado, se o botão de cadastro foi pressionado
@@ -42,14 +42,14 @@ if (isset($_POST['cadastro'])) {
     </header>
     <main>
         <section class="container-form">
-            <!-- Início do formulário de cadastro de tarefas -->
+            
             <form method="post" enctype="multipart/form-data">
 
-                <!-- Campo de entrada para o título da tarefa -->
+                
                 <label for="titulo">titulo:</label>
                 <input name="titulo" type="text" id="titulo" placeholder="Digite a tarefa" required>
 
-                <!-- Opções de estado da tarefa (radio buttons) -->
+                
                 <div class="container-radio">
                     <div>
 
@@ -72,11 +72,11 @@ if (isset($_POST['cadastro'])) {
                     </div>
                 </div>
 
-                <!-- Campo de entrada para a descrição da tarefa -->
+                
                 <label for="descricao">Descrição</label>
                 <input name="descricao" type="text" id="descricao" placeholder="Digite uma descrição" required>
 
-                <!-- Botão de envio do formulário -->
+                
                 <input name="cadastro" type="submit" class="botao-cadastrar" value="Cadastrar produto" />
             </form>
 
