@@ -35,9 +35,11 @@ Este projeto é uma aplicação simples de gerenciamento de tarefas desenvolvida
 
 2. **Configure o banco de dados:**
 
-   1. abra seu gerenciador MySQL e importe o arquivo **database_api_rest .sql**.
-   2. Atualize as credenciais do banco de dados no arquivo src/conexao.php se necessário.
+   1. dentro do repositorio voce vai encontrar o banco de dados: **database_api_rest .sql**
+   2. retire ele do projeto e abra seu gerenciador MySQL, após isso importe o arquivo.
+   3. Atualize as credenciais do banco de dados no arquivo src/conexao.php se necessário.
 
 3. **Configuração do servidor web:**
 
 Coloque o projeto no diretório do servidor web configurado (por exemplo, htdocs para Apache) e acesse http://localhost/seu-repositorio.
+
