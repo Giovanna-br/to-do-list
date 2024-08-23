@@ -1,0 +1,107 @@
+/* Estrutural Corpo do site */
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+/* header */
+
+.titulo-cabesalho {
+    text-align: center;
+    font-size: 48px;
+    margin: 20px 0px;
+    color: #2a2185;
+    font-weight: bold;
+}
+
+
+/* tabela do Gerenciador de Tarefas */
+
+.container-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container-table {
+    width: 90%;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+thead{
+    border: 1px solid #333B1E;
+}
+
+.th-form {
+    color: #2a2185;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+    padding: 8px;
+}
+
+.tarefas-form td {
+    color: #2a2185;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.tarefas-form{
+
+    background-color: rgb(222, 236, 255);
+
+}
+
+.tarefas-form:hover{
+    background-color: rgb(189, 224, 255); 
+}
+
+
+/* CSS dos botoes */
+
+.botao-editar,
+.botao-excluir {
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: 0.7s;
+    border: none;
+    font-size: 18px;
+}
+
+
+.botao-editar:hover,
+.botao-cadastrar:hover,
+.botao-excluir:hover {
+    cursor: pointer;
+    filter: saturate(350%);
+}
+
+.botao-cadastrar {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    background: rgb(101, 183, 255);
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: none;
+}
+
+
+.botao-editar {
+    background: #4032b9;
+}
+
+.botao-excluir {
+    background: rgb(101, 183, 255);
+}
