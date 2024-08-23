@@ -1,5 +1,4 @@
 <?php
-// Requer os arquivos necessários para a conexão ao banco de dados, definição de objetos e repositório de tabelas.
 require "src/conexao.php";
 require "src/Modelo/objetos.php";
 require "src/Repositorio/tabelasRepositorio.php";
